@@ -1,0 +1,85 @@
+/* Общие настройки */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #eef6f0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ТОЛЬКО главный header */
+body > header {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Основной контейнер */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Секции */
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 6px solid #2e8b57;
+    border-radius: 6px;
+}
+
+/* Заголовки секций */
+section h2 {
+    color: #2e8b57;
+    margin-top: 0;
+}
+
+/* Подзаголовки */
+h3 {
+    margin-bottom: 5px;
+}
+
+/* Контакт */
+address {
+    font-style: normal;
+}
+
+/* Списки */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* Ссылки */
+a {
+    color: #2e8b57;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Фото */
+img {
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* Опыт */
+article {
+    margin-bottom: 15px;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #e8f5e9;
+    margin-top: 30px;
+}
