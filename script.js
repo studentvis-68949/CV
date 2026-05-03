@@ -72,12 +72,35 @@ if (form) {
       document.getElementById("messageError").textContent = "Wpisz wiadomość";
       isValid = false;
     }
-
-    if (isValid) {
-      document.getElementById("successMessage").textContent = "Formularz wysłany!";
-    }
   });
 }
+
+ if (isValid) {
+
+  const formData = {
+    name,
+    surname,
+    email,
+    message
+  };
+
+  fetch("http://localhost:3000/save", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("successMessage").textContent = data.message;
+  })
+  .catch(err => {
+    console.error(err);
+    document.getElementById("successMessage").textContent = "Błąd wysyłania!";
+  });
+}
+
 
 fetch("data.json")
   .then(response => response.json())
